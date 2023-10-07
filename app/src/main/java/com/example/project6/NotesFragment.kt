@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.NavGraph
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project6.databinding.FragmentNotesBinding
 
@@ -20,7 +22,7 @@ import com.example.project6.databinding.FragmentNotesBinding
  */
 class NotesFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var addNoteButton: Button
+    private lateinit var navGraph: NavGraph
     private var _binding: FragmentNotesBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -30,7 +32,7 @@ class NotesFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentNotesBinding.inflate(inflater, container, false)
         binding.addNoteButton.setOnClickListener {
-            // Navigate to NoteFragment
+            findNavController().navigate(R.id.action_notes_to_note)
         }
 
         return binding.root
