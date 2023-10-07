@@ -33,10 +33,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+        dataBinding =  true
+    }
 }
 
 dependencies {
 
+    implementation ("com.android.support:appcompat-v7:33.0.0")
+    implementation ("com.android.support:recyclerview-v7:33.0.0")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
