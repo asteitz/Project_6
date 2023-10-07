@@ -13,8 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="16dp"
         android:layout_marginTop="10dp"
-
-        />
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
     <Button
         android:id="@+id/addNoteButton"
         android:layout_width="match_parent"

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<navigation android:id="@+id/nav_graph">
     <fragment
         android:id="@+id/Notes"
         android:name="com.example.project6.NotesFragment">
     <action
         android:id="@+id/action_notes_to_note"
         app:destination="@id/Note" />
+    <action
+        android:id="@+id/action_notes_to_dialog"
+        app:destination="@id/Note" />
     </fragment>
+
+
 
     <fragment
         android:id="@+id/Note"
@@ -17,4 +22,13 @@
         android:id="@+id/action_note_to_notes"
         app:destination="@id/Notes" />
     </fragment>
+
+    <fragment
+        android:id="@+id/Dialog"
+        android:name="com.example.project6.DeleteDialog">
+        <action
+            android:id="@+id/action_dialog_to_notes"
+            app:destination="@id/Notes" />
+    </fragment>
 </navigation>
+</layout>
