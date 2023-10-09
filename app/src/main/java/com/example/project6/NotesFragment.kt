@@ -34,7 +34,6 @@ class NotesFragment : Fragment() {
         binding.addNoteButton.setOnClickListener {
             findNavController().navigate(R.id.action_notes_to_note)
         }
-
         return binding.root
 
     }
