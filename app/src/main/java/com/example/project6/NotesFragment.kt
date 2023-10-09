@@ -13,6 +13,7 @@ import com.example.project6.databinding.FragmentNotesBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+// need to merge with the main activity
 
 
 /**
