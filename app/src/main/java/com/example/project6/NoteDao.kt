@@ -8,6 +8,11 @@ import androidx.room.Update
 
 @Dao
 interface NoteDao {
+    /**
+     * Used as the interface working with the database to insert, delete and update the main data
+     * table holding the notes present
+     *
+     */
     @Insert
     suspend fun insert(task: Note)
     @Update
