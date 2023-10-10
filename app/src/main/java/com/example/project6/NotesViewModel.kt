@@ -17,16 +17,10 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
     fun addNote() {
         viewModelScope.launch {
             var note = Note()
-            note.noteTitle = "placeholder"
-            note.noteBody = "placeholder"
-            val insertJob = async(Dispatchers.Main) {
-                dao.insert(note)
-
-            }
-            insertJob.await()
-            _navigateToNote.value = note.noteId
-
-
+            note.noteTitle = ""
+            note.noteBody = ""
+            val id = dao.insert(note)
+            _navigateToNote.value = id
 
         }
     }
