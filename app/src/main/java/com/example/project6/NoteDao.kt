@@ -14,13 +14,13 @@ interface NoteDao {
      *
      */
     @Insert
-    suspend fun insert(task: Note)
+    suspend fun insert(note: Note)
     @Update
-    suspend fun update(task: Note)
+    suspend fun update(note: Note)
     @Delete
-    suspend fun delete(task: Note)
-    @Query("SELECT * FROM task_table WHERE taskId = :key")
+    suspend fun delete(note: Note)
+    @Query("SELECT * FROM task_table WHERE noteId = :key")
     fun get(key: Long): LiveData<Note>
-    @Query("SELECT * FROM task_table ORDER BY taskId DESC")
+    @Query("SELECT * FROM task_table ORDER BY noteId DESC")
     fun getAll(): LiveData<List<Note>>
 }

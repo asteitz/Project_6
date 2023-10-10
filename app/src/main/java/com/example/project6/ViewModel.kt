@@ -5,23 +5,23 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class TasksViewModel(val dao: NoteDao) : ViewModel() {
+class NotesViewModel(val dao: NoteDao) : ViewModel() {
     var newNoteName = ""
     val notes = dao.getAll()
-    private val _navigateToTask = MutableLiveData<Long?>()
+    private val _navigateToNote = MutableLiveData<Long?>()
     val navigateToTask: LiveData<Long?>
-        get() = _navigateToTask
+        get() = _navigateToNote
     fun addNote() {
         viewModelScope.launch {
             val note = Note()
-            note.noteName = newNoteName
+            note.noteTitle = newNoteName
             dao.insert(note)
         }
     }
-    fun onTaskClicked(taskId: Long) {
-        _navigateToTask.value = taskId
+    fun onNoteClicked(noteId: Long) {
+        _navigateToNote.value = noteId
     }
-    fun onTaskNavigated() {
-        _navigateToTask.value = null
+    fun onNoteNavigated() {
+        _navigateToNote.value = null
     }
 }
