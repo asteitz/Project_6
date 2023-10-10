@@ -51,6 +51,7 @@ Safeargs and View Groups were implemented to transfer data from MainActivity.kt 
 * [Animals] [BACK]
 * [Add Note]  -> [TITLE:Classes] [Typed: C322, C323, B461, D351, D321, C343, C200 ] [DELETE] 
 <br>
+
 **END**
 
 
