@@ -29,8 +29,12 @@
             fun bind(item: Note, clickListener: (noteId: Long) -> Unit,
                      deleteClickListener: (noteId: Long) -> Unit) {
                 binding.note = item
-                binding.root.setOnClickListener { clickListener(item.noteId) }
-                binding.xButton.setOnClickListener{ deleteClickListener(item.noteId) }
+                binding.root.setOnClickListener { item.noteId?.let { it1 -> clickListener(it1) } }
+                binding.xButton.setOnClickListener{ item.noteId?.let { it1 ->
+                    deleteClickListener(
+                        it1
+                    )
+                } }
             }
         }
     }
