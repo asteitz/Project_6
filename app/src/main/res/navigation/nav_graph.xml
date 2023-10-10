@@ -14,7 +14,7 @@
         app:destination="@id/Note" />
     <action
         android:id="@+id/action_notes_to_dialog"
-        app:destination="@id/Note" />
+        app:destination="@id/Dialog" />
     </fragment>
 
 

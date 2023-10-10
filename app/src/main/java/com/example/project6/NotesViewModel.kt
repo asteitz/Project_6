@@ -4,6 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.RoomDatabase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class NotesViewModel(val dao: NoteDao) : ViewModel() {
@@ -14,11 +16,18 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
 
     fun addNote() {
         viewModelScope.launch {
-            val note = Note()
-            note.noteTitle = " "
-            note.noteBody = " "
+            var note = Note()
+            note.noteTitle = "placeholder"
+            note.noteBody = "placeholder"
+            val insertJob = async(Dispatchers.Main) {
+                dao.insert(note)
+
+            }
+            insertJob.await()
             _navigateToNote.value = note.noteId
-            dao.insert(note)
+
+
+
         }
     }
 
