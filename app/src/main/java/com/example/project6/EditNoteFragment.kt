@@ -21,7 +21,7 @@ class EditNoteFragment: Fragment() {
         _binding = FragmentNoteBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        val noteId = NoteFragmentArgs.fromBundle(requireArguments()).noteId
+        val noteId = EditNoteFragmentArgs.fromBundle(requireArguments()).noteId
 
         val application = requireNotNull(this.activity).application
         val dao = NotesDatabase.getInstance(application).noteDao
