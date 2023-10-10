@@ -4,6 +4,11 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/Notes"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.project6.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main"/>
     <fragment
         android:id="@+id/Notes"
         android:name="com.example.project6.NotesFragment"
@@ -23,12 +28,12 @@
         android:name="com.example.project6.EditNoteFragment"
         android:label="fragment_note"
         tools:layout="@layout/fragment_note" >
-        <argument
-            android:name="noteId"
-            app:argType="long" />
     <action
         android:id="@+id/action_note_to_notes"
         app:destination="@id/Notes" />
+    <argument
+        android:name="noteId"
+        app:argType="long" />
 
     </fragment>
 

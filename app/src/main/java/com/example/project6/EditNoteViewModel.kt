@@ -15,8 +15,6 @@ import kotlinx.coroutines.launch
             get() = _navigateToList
         fun saveNote() {
             viewModelScope.launch {
-//                note.value!!.noteTitle = title
-//                note.value!!.noteBody = body
                 dao.update(note.value!!)
                 _navigateToList.value = true
             }
