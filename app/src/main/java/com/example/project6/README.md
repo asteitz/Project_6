@@ -36,20 +36,26 @@ The following **required** functionality is completed:
 <br>
 Safeargs and View Groups were implemented to transfer data from MainActivity.kt to Fragment1.kt. This allows us to gather the user data and translate it in real time!
 
-**Demonstrated** 4753
-* [English] -> [Spanish] [Typed: Hi my name is ashley steitz and I study computer science] [Recieved: Hola mi nombre es ashley y soy una espacializacion en ciencias de la computaticion ] [ctrl +  a 'delete']
-* [Spanish] -> [English] [Typed: Hola mi nombre es Ashley y me gusta comida] [Recieved: Hello my name is ashley and I like food] [ctrl +  a 'delete']
-* [German]  -> [English] [Typed: Danke] [Recieved: Thank you] [ctrl +  a 'delete']
-* [Spanish] -> [German]  [Typed: Buenas dias, mi nombre es Ashley y mi perro es llama Keeton] [Recieved: Guten Mogen, mein Name ist Ashley und mein Hund heibt Keeton] [ctrl +  a 'delete']
-* [German]  -> [Spanish] [Typed: Danke] [Recieved: Gracias] [ctrl +  a 'delete']
-* [German]  -> [English] [Typed: Danke] [Recieved: Thank you] [END]
+**Demonstrated**
+* [START]
+* [Add Note] -> [TITLE:Names ] [Typed: Ashley, Jacob, Anna, Clarissa, Jenna, John, Kyle] [SAVE]
+* [Add Note] -> [TITLE:Cities] [Typed: New York, Miami, Seattle, Chicago, Paris, Madrid, Copenhagen] [BACK] 
+* [Add Note]  -> [TITLE:Food] [Typed: Pizza, Hot Dog, Popcorn, Salad, Fruit, Vegtable, Pasta, Hummus ] [SAVE]
+* [Cities]  -> [TITLE:Cities] [Typed: New York, Miami, Seattle ] [SAVE]
+* [Add Note] -> [TITLE:Animals]  [Typed: Cat, Dog, Elepant, Snake, Zebra ] [SAVE]
+* [Add Note]  -> [TITLE:Hello] [Typed: Hi, Aloha, Hola, Bonjour, Ni Hao, Halo ] [SAVE] 
+* [Animals] -> [TITLE:Animals]  [Typed: Cat] [BACK]
+* [Cities] [BACK]
+* [Animals] [BACK]
+* [Add Note]  -> [TITLE:Classes] [Typed: C322, C323, B461, D351, D321, C343, C200 ] [DELETE] 
+* [END]
 
 
 ---
 ## Video Walkthrough
-Watch a demonstration of each language combination in the gif available on Github
+Watch a demonstration of the different options when working with the notes app in the gif available on Github
 Here's a walkthrough of a few translations:
-<img src='https://github.com/asteitz/Project5/blob/master/app/src/main/java/com/example/project5/Project5Recording.gif' title='Project5 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
+<img src='' title='Project5 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
 
 GIF created with [CloudConvert](https://cloudconvert.com/).
 
