@@ -7,7 +7,6 @@ import androidx.room.RoomDatabase
 import kotlinx.coroutines.launch
 
 class NotesViewModel(val dao: NoteDao) : ViewModel() {
-    var newNoteName = ""
     val notes = dao.getAll()
     private val _navigateToNote = MutableLiveData<Long?>()
     val navigateToNote: LiveData<Long?>
@@ -16,7 +15,8 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
     fun addNote() {
         viewModelScope.launch {
             val note = Note()
-            note.noteTitle = newNoteName
+            note.noteTitle = " "
+            note.noteBody = " "
             _navigateToNote.value = note.noteId
             dao.insert(note)
         }
