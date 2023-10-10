@@ -16,6 +16,7 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
         viewModelScope.launch {
             val note = Note()
             note.noteTitle = newNoteName
+            _navigateToNote.value = note.noteId
             dao.insert(note)
         }
     }

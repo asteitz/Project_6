@@ -12,8 +12,7 @@
 
 <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".EditNoteFragment">
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,7 +29,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="780dp"
-        android:hint="@string/body"
+        android:hint="@string/description"
         android:text="@={viewModel.note.noteBody}"/>
     <LinearLayout
         android:layout_width="match_parent"
