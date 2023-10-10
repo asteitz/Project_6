@@ -55,14 +55,14 @@ GIF created with [CloudConvert](https://cloudconvert.com/).
 
 ## Notes
 UI Challenges:
-- Passing the data from a fragment textview part into the nragment section in the MainActivity.xml
-- Setting up the fragment section
+- Integrating a recycler View into the UI for the main notes page
+- Adding in a constraint layout to keep the buttons in place when the user is typing
+- Adding function calls inside the xml files
 
 Backend Challenges:
-- Implementing a way to pass items through view groups as opposed to the R.id
-- Understanding the inflating of view groups
-- Using the viewgroups and the binding and how it works the same with fragments as well as kotlin files
-- Adding the proper additions to the gradle files and the needed declarations of viewgroups and bindings in the onCreate()
+- Difficult time with the gradle files and versions not being compatible
+- Struggled integrating the SQL database into the calls when a button is pressed
+- Working with an adapter to communicate between the view model and the database
 
 ## License
 
