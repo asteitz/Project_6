@@ -4,15 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-    class EditNoteViewModel(taskId: Long, val dao: NoteDao) : ViewModel() {
-        val note = dao.get(taskId)
+    class EditNoteViewModel(noteId: Long, val dao: NoteDao) : ViewModel() {
+        val note = dao.get(noteId)
         private val _navigateToList = MutableLiveData<Boolean>(false)
         val navigateToList: LiveData<Boolean>
             get() = _navigateToList
         fun saveNote() {
             viewModelScope.launch {
-                dao.update(note.value!!)
+                note.value?.let { dao.update(it) }
                 _navigateToList.value = true
             }
         }

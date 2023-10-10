@@ -50,8 +50,8 @@ class NotesFragment : Fragment() {
             Log.d(TAG, "in yesPressed(): noteId = $noteId")
             viewModel.deleteNote(noteId)
         }
-        fun deleteClicked (taskId : Long) {
-            DeleteDialog(taskId,::yesPressed).show(childFragmentManager,
+        fun deleteClicked (noteId : Long) {
+            DeleteDialog(noteId,::yesPressed).show(childFragmentManager,
                 DeleteDialog.TAG)
         }
         val adapter = NotesAdapter(::noteClicked,::deleteClicked)
@@ -63,10 +63,10 @@ class NotesFragment : Fragment() {
                 adapter.submitList(it)
             }
         })
-        viewModel.navigateToTask.observe(viewLifecycleOwner, Observer { taskId ->
-            taskId?.let {
+        viewModel.navigateToNote.observe(viewLifecycleOwner, Observer { noteId ->
+            noteId?.let {
                 val action = NotesFragmentDirections
-                    .actionNotesToNote(taskId)
+                    .actionNotesToNote(noteId)
                 this.findNavController().navigate(action)
                 viewModel.onNoteNavigated()
             }
