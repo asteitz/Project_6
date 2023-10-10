@@ -26,9 +26,9 @@
                 }
             }
 
-            fun bind(item: Note, clickListener: (taskId: Long) -> Unit,
-                     deleteClickListener: (taskId: Long) -> Unit) {
-                binding.task = item
+            fun bind(item: Note, clickListener: (noteId: Long) -> Unit,
+                     deleteClickListener: (noteId: Long) -> Unit) {
+                binding.note = item
                 binding.root.setOnClickListener { clickListener(item.noteId) }
                 binding.xButton.setOnClickListener{ deleteClickListener(item.noteId) }
             }

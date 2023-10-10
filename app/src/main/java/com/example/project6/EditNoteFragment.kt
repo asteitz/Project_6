@@ -20,7 +20,6 @@ class EditNoteFragment: Fragment() {
     ): View? {
         _binding = FragmentNoteBinding.inflate(inflater, container, false)
         val view = binding.root
-
         val noteId = EditNoteFragmentArgs.fromBundle(requireArguments()).noteId
 
         val application = requireNotNull(this.activity).application
@@ -30,6 +29,7 @@ class EditNoteFragment: Fragment() {
         val viewModel = ViewModelProvider(this, viewModelFactory)
             .get(EditNoteViewModel::class.java)
         binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
         viewModel.navigateToList.observe(viewLifecycleOwner, Observer { navigate ->
             if (navigate) {
                 view.findNavController()

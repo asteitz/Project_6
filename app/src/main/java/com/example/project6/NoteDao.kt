@@ -23,4 +23,8 @@ interface NoteDao {
     fun get(key: Long): LiveData<Note>
     @Query("SELECT * FROM notes_table ORDER BY noteId DESC")
     fun getAll(): LiveData<List<Note>>
+
+    @Query("DELETE FROM notes_table")
+    fun nukeTable()
+
 }
