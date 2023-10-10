@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".EditNoteFragment">
+        >
 
         <!-- Title EditText -->
         <EditText
@@ -53,7 +53,7 @@
 
             <!-- Back Button -->
             <Button
-                android:layout_width="0dp"
+                android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:text="@string/back"
                 android:textSize="20sp"
@@ -65,7 +65,7 @@
 
             <!-- Save Button -->
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:text="@string/save"
                 android:textSize="20sp"
