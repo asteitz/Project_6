@@ -13,13 +13,16 @@ This app allows for a user to:
 To begin we integrated SQL into our data handling to store our user entries. We used a recycler view to store the notes and display them on the main note page (screen) 
 and it allows for users to scroll and view all posted notes without fear of losing the content when it goes off the page!
 <br>
+<br>
 To begin a user is prompted to "Add a Note" at the bottom  of the main screen where they are taken to the next fragment, prompting for a Note Title and Note Body.
 After the user enters both they have the option to go "BACK" to the main page or "SAVE". If "SAVE" is pressed, then their note title and bosy are inserted into the database.
 If they select back, then their note is not saved and they will return back to the main page and will _not_ see their note present.
 <br>
+<br>
 When a user clicks onto the note title then the screen is brought up with their their previous body, allowing them to make edits to the
 previously held data in that note. They need to select the save button to save their modified (or newly created note), where their changes are enacted into their note using the "Update" call to the database.
 If the back button is pressed then their changes are not saved and they are brought back to the main screen.
+<br>
 <br>
 On the main screen after a note is created, we see the title and a button with a red "X", this is a delete button and if this is pressed the user is greeted by a dialog that prompts
 them to select "YES" or "NO", confirming or denying their selection to delete their note. If they delete the note the note title and body are deleted from the data base. If "NO" is selected,
