@@ -10,63 +10,70 @@
             type="com.example.project6.EditNoteViewModel" />
     </data>
 
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".EditNoteFragment">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        tools:context=".EditNoteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:hint="@string/title"
-        android:layout_gravity="top"
-        android:text="@={viewModel.Note.noteTitle}"/>
+        <!-- Title EditText -->
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:hint="@string/title"
+            android:text="@={viewModel.Note.noteTitle}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="780dp"
-        android:hint="@string/body"
-        android:text="@={viewModel.note.noteBody}"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        <!-- Body EditText -->
+        <EditText
+            android:id="@+id/bodyEditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/body"
+            android:text="@={viewModel.note.noteBody}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleEditText"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+            app:layout_constraintHorizontal_bias="0.5" />
 
-    <Button
-        android:layout_width="175dp"
-        android:layout_height="50dp"
-        android:text="@string/back"
-        android:textSize="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_gravity="bottom"
-        android:textAlignment="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        app:cornerRadius="7dp"
-        tools:ignore="RtlCompat"
-        android:onClick="@{() -> viewModel.dontSaveNote()}"/>
+        <!-- Button Layout -->
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5">
 
-    <Button
-        android:layout_width="175dp"
-        android:layout_height="50dp"
-        android:text="@string/save"
-        android:textSize="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_gravity="bottom"
-        android:textAlignment="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:cornerRadius="7dp"
-        tools:ignore="RtlCompat"
-        android:onClick="@{() -> viewModel.saveNote()}"/>
-    </LinearLayout>
+            <!-- Back Button -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/back"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                app:cornerRadius="7dp"
+                tools:ignore="RtlCompat"
+                android:onClick="@{() -> viewModel.dontSaveNote()}" />
 
-    </LinearLayout>
-</FrameLayout>
+            <!-- Save Button -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/save"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                app:cornerRadius="7dp"
+                tools:ignore="RtlCompat"
+                android:onClick="@{() -> viewModel.saveNote()}" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
