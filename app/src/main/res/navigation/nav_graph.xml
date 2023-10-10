@@ -10,6 +10,20 @@
         android:label="activity_main"
         tools:layout="@layout/activity_main"/>
     <fragment
+        android:id="@+id/Note"
+        android:name="com.example.project6.EditNoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_note_to_notes"
+            app:destination="@id/Notes" />
+        <argument
+            android:name="noteId"
+            app:argType="long" />
+
+    </fragment>
+
+    <fragment
         android:id="@+id/Notes"
         android:name="com.example.project6.NotesFragment"
         android:label="fragment_notes"
@@ -17,32 +31,9 @@
     <action
         android:id="@+id/action_notes_to_note"
         app:destination="@id/Note" />
-    <action
-        android:id="@+id/action_notes_to_dialog"
-        app:destination="@id/Dialog" />
     </fragment>
 
 
-    <fragment
-        android:id="@+id/Note"
-        android:name="com.example.project6.EditNoteFragment"
-        android:label="fragment_note"
-        tools:layout="@layout/fragment_note" >
-    <action
-        android:id="@+id/action_note_to_notes"
-        app:destination="@id/Notes" />
-    <argument
-        android:name="noteId"
-        app:argType="long" />
-
-    </fragment>
 
 
-    <fragment
-        android:id="@+id/Dialog"
-        android:name="com.example.project6.DeleteDialog">
-        <action
-            android:id="@+id/action_dialog_to_notes"
-            app:destination="@id/Notes" />
-    </fragment>
 </navigation>
