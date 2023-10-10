@@ -11,6 +11,7 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
     private val _navigateToNote = MutableLiveData<Long?>()
     val navigateToTask: LiveData<Long?>
         get() = _navigateToNote
+
     fun addNote() {
         viewModelScope.launch {
             val note = Note()
@@ -18,10 +19,18 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
             dao.insert(note)
         }
     }
+
     fun onNoteClicked(noteId: Long) {
         _navigateToNote.value = noteId
     }
+
     fun onNoteNavigated() {
         _navigateToNote.value = null
+    }
+
+    fun deleteNote(noteId: Long) {
+        viewModelScope.launch {
+            dao.delete(dao.get(noteId).value!!)
+        }
     }
 }

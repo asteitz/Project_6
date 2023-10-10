@@ -2,7 +2,8 @@
     import android.view.ViewGroup
     import androidx.recyclerview.widget.ListAdapter
     import androidx.recyclerview.widget.RecyclerView
-    import com.example.project6.databinding.NoteItemBinding
+    import com.example.project6.Note
+    import com.example.project6.databinding.FragmentNotesBinding
     class NotesAdapter (val clickListener: (noteId: Long) -> Unit,
                           val deleteClickListener: (noteId: Long) -> Unit)
         : ListAdapter<Note, NoteItemAdapter.TaskItemViewHolder>(NoteDiffItemCallback()) {
