@@ -37,6 +37,7 @@ The following **required** functionality is completed:
 Safeargs and View Groups were implemented to transfer data from MainActivity.kt to Fragment1.kt. This allows us to gather the user data and translate it in real time!
 
 **Demonstrated**
+<br>
 **START** 
 <br>
 * [Add Note] -> [TITLE:Names ] [Typed: Ashley, Jacob, Anna, Clarissa, Jenna, John, Kyle] [SAVE]
@@ -50,7 +51,7 @@ Safeargs and View Groups were implemented to transfer data from MainActivity.kt 
 * [Animals] [BACK]
 * [Add Note]  -> [TITLE:Classes] [Typed: C322, C323, B461, D351, D321, C343, C200 ] [DELETE] 
 <br>
-* **END**
+**END**
 
 
 ---
