@@ -15,14 +15,15 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
     val navigateToNote: LiveData<Long?>
         get() = _navigateToNote
 
+    var noteTitle = ""
+    var noteBody = ""
     fun addNote() {
         viewModelScope.launch {
             var note = Note()
-            note.noteTitle = ""
-            note.noteBody = ""
+            note.noteTitle = noteTitle
+            note.noteBody = noteBody
             val id = dao.insert(note)
             _navigateToNote.value = id
-
         }
     }
 
@@ -36,7 +37,9 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
 
     fun deleteNote(noteId: Long) {
         viewModelScope.launch {
-            dao.delete(dao.get(noteId).value!!)
+            val deletedNote = dao.get(noteId).await()
+            dao.delete(deletedNote)
+            _navigateToNote.value = null
         }
     }
 }

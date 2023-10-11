@@ -15,6 +15,7 @@
             holder.bind(item, clickListener, deleteClickListener)
         }
 
+
         class NoteItemViewHolder(val binding: RvLayoutBinding)
             : RecyclerView.ViewHolder(binding.root) {
 

@@ -43,6 +43,12 @@ class NotesFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
+        binding.addNoteButton.setOnClickListener{
+            val action = NotesFragmentDirections.actionNotesToNote((-1))
+            findNavController().navigate(action)
+            viewModel.onNoteNavigated()
+        }
+
         fun noteClicked (noteId : Long) {
             viewModel.onNoteClicked(noteId)
         }
