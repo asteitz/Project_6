@@ -14,6 +14,13 @@ import kotlin.coroutines.resume
 
 
     class EditNoteViewModel(noteId: Long, val dao: NoteDao) : ViewModel() {
+        /**
+         * NotesViewModel's purpose is to get the data from the database and to communicate to the
+         * dao to either insert, delete or update the data passed into the function
+         *
+         * @param dao the database we are working with
+         * @return calls to dao on the required command (insert, delete, update)
+         */
         var title = ""
         var body = ""
         var noteId = noteId
@@ -29,6 +36,14 @@ import kotlin.coroutines.resume
         val navigateToList: LiveData<Boolean>
             get() = _navigateToList
         fun saveNote() {
+            /**
+             * The EditNoteViewModel is used when a user either wants to add or update and existing note.
+             *
+             * The save note function takes the note id and checks if it is in the data base (noteId >= 0)
+             * or if it is not already in the database (noteId = -1)
+             *
+             *
+             */
             viewModelScope.launch {
 
                 if(noteId == (-1).toLong()) {
@@ -44,6 +59,7 @@ import kotlin.coroutines.resume
             }
         }
         fun dontSaveNote() {
+            // if the back button is pressed we do not save the value of the note
             viewModelScope.launch {
                 _navigateToList.value = true
             }

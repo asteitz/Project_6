@@ -13,10 +13,22 @@ import com.example.project6.databinding.FragmentNoteBinding
 
 
 class EditNoteFragment: Fragment() {
+    /***
+     * This Class handles the actions taken when a note is clicked or when a user presses the add note button
+     */
     private var _binding: FragmentNoteBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
+        /**
+         * The onCreateView function is overridden to take the arguments from the noteId and set the view model
+         *
+         * @param inflater used to inflate the view model
+         * @param container used in the binding containing the view grop
+         * @param savedInstanceState holding the previous state of the object to reflect the current behaviors
+         *
+         * @returns the view
+         * */
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -45,6 +57,10 @@ class EditNoteFragment: Fragment() {
         return view
     }
     override fun onDestroyView() {
+        /**
+         * used to destory the view
+         * @return no return, just destroys the view
+         */
         super.onDestroyView()
         _binding = null
     }

@@ -30,6 +30,15 @@ class NotesFragment : Fragment() {
     private var _binding: FragmentNotesBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
+        /**
+         * The onCreateView function is overridden to take the arguments from the noteId and set the view model
+         *
+         * @param inflater used to inflate the view model
+         * @param container used in the binding containing the view grop
+         * @param savedInstanceState holding the previous state of the object to reflect the current behaviors
+         *
+         * @returns the view
+         * */
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {

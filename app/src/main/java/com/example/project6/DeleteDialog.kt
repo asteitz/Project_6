@@ -14,6 +14,13 @@ import androidx.fragment.app.DialogFragment
 
 
 class DeleteDialog(val noteId : Long,val clickListener: (noteId: Long) -> Unit) : DialogFragment() {
+    /**
+     * this class is used for the delete button and the prompting of the user to confirm or deny their selection
+     * @param noteId
+     * @param clickListener
+     *
+     * @return the item is either deleted ("yes" is pressed) from the database or left alon ("no" is pressed)
+     */
     val TAG = "ConfirmDeleteDialogFragment"
     interface myClickListener {
         fun yesPressed()

@@ -10,6 +10,13 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class NotesViewModel(val dao: NoteDao) : ViewModel() {
+    /**
+     * NotesViewModel's purpose is to get the data from the database and to communicate to the
+     * dao to either insert, delete or update the data passed into the function
+     *
+     * @param dao the database we are working with
+     * return calls to dao on the required command (insert, delete, update)
+     * */
     val notes = dao.getAll()
     private val _navigateToNote = MutableLiveData<Long?>()
     val navigateToNote: LiveData<Long?>
@@ -18,6 +25,9 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
     var noteTitle = ""
     var noteBody = ""
     fun addNote() {
+        /**
+         * AddNotes takes the note objects title and body and inserts the value into the database
+         */
         viewModelScope.launch {
             var note = Note()
             note.noteTitle = noteTitle
@@ -36,6 +46,9 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
     }
 
     fun deleteNote(noteId: Long) {
+        /**
+         * retrieves the noteId from the note obejct and calls delete on that id in the database
+         */
         viewModelScope.launch {
             val note = Note()
             note.noteId = noteId

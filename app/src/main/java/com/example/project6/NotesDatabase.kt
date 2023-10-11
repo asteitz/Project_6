@@ -9,6 +9,10 @@ import kotlinx.coroutines.internal.synchronized
 
 @Database(entities = [Note::class], version = 1)
 abstract class NotesDatabase: RoomDatabase() {
+    /**
+     * Referencing the instance of the SQL Lite data base
+     * @returns an instance of the Notes database
+     */
     abstract val noteDao: NoteDao
     companion object {
         @Volatile
