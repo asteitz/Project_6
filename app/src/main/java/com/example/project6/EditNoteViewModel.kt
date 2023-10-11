@@ -21,20 +21,22 @@ import kotlin.coroutines.resume
          * @param dao the database we are working with
          * @return calls to dao on the required command (insert, delete, update)
          */
-        var title = ""
-        var body = ""
-        var noteId = noteId
-
-       var note : LiveData<Note>? = null
-        init {
-            if (noteId != (-1).toLong()) {
-                note = dao.get(noteId)
-                            }
-        }
-
+        var noteId: Long = noteId
         private val _navigateToList = MutableLiveData<Boolean>(false)
+       var note = MutableLiveData<Note>()
         val navigateToList: LiveData<Boolean>
             get() = _navigateToList
+        init {
+            dao.get(noteId).observeForever{ it ->
+                if(it == null) {
+                    note.value = Note()
+                } else {
+                    note.value = it
+                }
+            }
+
+        }
+
         fun saveNote() {
             /**
              * The EditNoteViewModel is used when a user either wants to add or update and existing note.
@@ -45,17 +47,12 @@ import kotlin.coroutines.resume
              *
              */
             viewModelScope.launch {
-
-                if(noteId == (-1).toLong()) {
-                    val note = Note()
-                    note.noteTitle = title
-                    note.noteBody = body
-                  dao.insert(note)
-                } else {
-                    dao.update(note?.value!!)
-
-                }
-                _navigateToList.value = true
+                    if(note.value?.noteId != 0L) {
+                        dao.update(note.value!!)
+                    } else {
+                        dao.insert(note.value!!)
+                    }
+                    _navigateToList.value = true
             }
         }
         fun dontSaveNote() {

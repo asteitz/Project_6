@@ -63,7 +63,7 @@ class NotesFragment : Fragment() {
         }
         fun yesPressed(noteId : Long) {
             Log.d(TAG, "in yesPressed(): noteId = $noteId")
-            viewModel.deleteNote(noteId)
+            binding.viewModel?.deleteNote(noteId)
         }
         fun deleteClicked (noteId : Long) {
             DeleteDialog(noteId,::yesPressed).show(childFragmentManager,
