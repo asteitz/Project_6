@@ -37,8 +37,9 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
 
     fun deleteNote(noteId: Long) {
         viewModelScope.launch {
-            val deletedNote = dao.get(noteId).await()
-            dao.delete(deletedNote)
+            val note = Note()
+            note.noteId = noteId
+            dao.delete(note)
             _navigateToNote.value = null
         }
     }

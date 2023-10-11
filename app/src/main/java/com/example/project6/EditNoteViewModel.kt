@@ -11,22 +11,7 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withContext
 import kotlin.coroutines.resume
 
-public suspend fun <T> LiveData<T>.await(): T {
-    return withContext(Dispatchers.Main.immediate) {
-        suspendCancellableCoroutine { continuation ->
-            val observer = object : Observer<T> {
-                override fun onChanged(value: T) {
-                    removeObserver(this)
-                    continuation.resume(value)
-                }
-            }
-            observeForever(observer)
-            continuation.invokeOnCancellation {
-                removeObserver(observer)
-            }
-        }
-    }
-}
+
 
     class EditNoteViewModel(noteId: Long, val dao: NoteDao) : ViewModel() {
         var title = ""
@@ -37,7 +22,7 @@ public suspend fun <T> LiveData<T>.await(): T {
         init {
             if (noteId != (-1).toLong()) {
                 note = dao.get(noteId)
-            }
+                            }
         }
 
         private val _navigateToList = MutableLiveData<Boolean>(false)
