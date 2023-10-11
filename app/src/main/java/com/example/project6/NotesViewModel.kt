@@ -22,21 +22,6 @@ class NotesViewModel(val dao: NoteDao) : ViewModel() {
     val navigateToNote: LiveData<Long?>
         get() = _navigateToNote
 
-    var noteTitle = ""
-    var noteBody = ""
-    fun addNote() {
-        /**
-         * AddNotes takes the note objects title and body and inserts the value into the database
-         */
-        viewModelScope.launch {
-            var note = Note()
-            note.noteTitle = noteTitle
-            note.noteBody = noteBody
-            val id = dao.insert(note)
-            _navigateToNote.value = id
-        }
-    }
-
     fun onNoteClicked(noteId: Long) {
         _navigateToNote.value = noteId
     }
