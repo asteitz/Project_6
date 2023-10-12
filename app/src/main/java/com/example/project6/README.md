@@ -71,6 +71,7 @@ Watch a demonstration of the different options when working with the notes app i
 Here's a walkthrough of a few translations:
 **there was a slight adjustment to the buttons size that was implemented after the video was created -> however this changes clossly
 reflects the UI requested in the PDF**
+<br>
 <img src='https://github.com/asteitz/Project_6/blob/master/app/src/main/java/com/example/project6/RecordingNotesApp.gif' title='Project6 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
 
 GIF created with [CloudConvert](https://cloudconvert.com/).
