@@ -69,17 +69,22 @@ Safeargs and View Groups were implemented to transfer data from MainActivity.kt 
 ## Video Walkthrough
 Watch a demonstration of the different options when working with the notes app in the gif available on Github
 Here's a walkthrough of a few translations:
+**there was a slight adjustment to the buttons size that was implemented after the video was created -> however this changes clossly
+reflects the UI requested in the PDF**
 <img src='https://github.com/asteitz/Project_6/blob/master/app/src/main/java/com/example/project6/RecordingNotesApp.gif' title='Project6 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
 
 GIF created with [CloudConvert](https://cloudconvert.com/).
 
 ## Notes
 UI Challenges:
+- Had the wrong auto set for the view of the notes (needed to be wrap contents instead of match parent)
+  - due to this we were not able to see the notes as they popped up
 - Integrating a recycler View into the UI for the main notes page
 - Adding in a constraint layout to keep the buttons in place when the user is typing
 - Adding function calls inside the xml files
 
 Backend Challenges:
+- Big issues with having the data being passed between the fragment and the database had to request extension and attend office hours
 - Difficult time with the gradle files and versions not being compatible
 - Struggled integrating the SQL database into the calls when a button is pressed
 - Working with an adapter to communicate between the view model and the database
