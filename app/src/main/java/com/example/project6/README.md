@@ -69,7 +69,7 @@ Safeargs and View Groups were implemented to transfer data from MainActivity.kt 
 ## Video Walkthrough
 Watch a demonstration of the different options when working with the notes app in the gif available on Github
 Here's a walkthrough of a few translations:
-**there was a slight adjustment to the buttons size that was implemented after the video was created -> however this changes clossly
+**there was a slight adjustment to the buttons size that was implemented after the video was created and the changes do not alter the performance of the app -> however this changes clossly
 reflects the UI requested in the PDF**
 <br>
 <img src='https://github.com/asteitz/Project_6/blob/master/app/src/main/java/com/example/project6/RecordingNotesApp.gif' title='Project6 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
