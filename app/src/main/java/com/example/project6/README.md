@@ -40,16 +40,26 @@ Safeargs and View Groups were implemented to transfer data from MainActivity.kt 
 <br>
 **START** 
 <br>
-* [Add Note] -> [TITLE:Names ] [Typed: Ashley, Jacob, Anna, Clarissa, Jenna, John, Kyle] [SAVE]
-* [Add Note] -> [TITLE:Cities] [Typed: New York, Miami, Seattle, Chicago, Paris, Madrid, Copenhagen] [BACK] 
-* [Add Note]  -> [TITLE:Food] [Typed: Pizza, Hot Dog, Popcorn, Salad, Fruit, Vegtable, Pasta, Hummus ] [SAVE]
-* [Cities]  -> [TITLE:Cities] [Typed: New York, Miami, Seattle ] [SAVE]
-* [Add Note] -> [TITLE:Animals]  [Typed: Cat, Dog, Elepant, Snake, Zebra ] [SAVE]
-* [Add Note]  -> [TITLE:Hello] [Typed: Hi, Aloha, Hola, Bonjour, Ni Hao, Halo ] [SAVE] 
-* [Animals] -> [TITLE:Animals]  [Typed: Cat] [BACK]
+* [Add Note] -> [TITLE:Names of my friends] [Typed: Ashley, Jacob, Anna, Clarissa, Jenna, John, Kyle] [SAVE]
+* [Add Note] -> [TITLE:Cities] [Typed: New York, Miami, Seattle, Chicago, Paris, Madrid] [BACK] 
+* [Add Note] -> [TITLE:Cities] [Typed: New York, Miami, Seattle, Chicago, Paris, Madrid] [SAVE]
+* [Add Note] -> [TITLE:Food] [Typed: Popcorn, Salad, Fruit, Vegtable, Pasta ] [SAVE]
+* [Cities]   -> [TITLE:Cities] [Typed: New York, Miami, Seattle ] [SAVE]
+* [Add Note] -> [TITLE:Test 2]  [Typed: u] [SAVE]
+  [Add Note] -> [TITLE:TEST 3]  [Typed: T] [SAVE]
+  [Add Note] -> [TITLE:TEST 4]  [Typed: T] [SAVE]
+  [Add Note] -> [TITLE:TEST 5]  [Typed: T] [SAVE]
+* [Add Note] -> [TITLE:Animals you see at the Zoo]  [Typed: Cat, Dog, Elepant, Snake, Zebra] [SAVE]
+* [Add Note] -> [TITLE:Hello] [Typed: Hello, Aloha, Hola, Bonjour, Ni Hao, Halo ] [SAVE] 
+* [Animals]  -> [TITLE:House Pet]  [Typed: Cat] [BACK]
 * [Cities] [BACK]
-* [Animals] [BACK]
-* [Add Note]  -> [TITLE:Classes] [Typed: C322, C323, B461, D351, D321, C343, C200 ] [DELETE] 
+* [House Pet] [Type: Cat] [BACK]
+* [Test 2] [X] [yes]
+* [TEST 3] [X] [yes]
+* [TEST 4] [X] [yes]
+* [TEST 5] [X] [yes]
+* [friends] [X] [no]
+
 <br>
 
 **END**
