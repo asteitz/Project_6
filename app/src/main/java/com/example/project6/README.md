@@ -69,7 +69,7 @@ Safeargs and View Groups were implemented to transfer data from MainActivity.kt 
 ## Video Walkthrough
 Watch a demonstration of the different options when working with the notes app in the gif available on Github
 Here's a walkthrough of a few translations:
-<img src='' title='Project5 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
+<img src='https://github.com/asteitz/Project_6/blob/master/app/src/main/java/com/example/project6/RecordingNotesApp.gif' title='Project6 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
 
 GIF created with [CloudConvert](https://cloudconvert.com/).
 
