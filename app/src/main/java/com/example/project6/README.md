@@ -1,16 +1,16 @@
-# Project_06 - Notes App
+# Project_07 - Reconfiguring Notes App
 <span style="font-size: smaller;"><strong>Ashley Steitz and Jacob Fritz worked on this as partners</strong></span>
 
 ---
 <span style="font-size: smaller;"><strong> Description </strong> </span>
-In our efforts to complete Project 05 we implemented an interactive Ui (User Interface) that allows the user to select a language and translate into one of the 3 options.
+In our efforts to complete Project 07 we implemented an interactive Ui (User Interface) that allows the user to add notes utilizing Firebase's Realtime Database.
 
 This app allows for a user to:
 - Create a new note
 - Edit a previous Note
 - Delete an Existing Note
 
-To begin we integrated SQL into our data handling to store our user entries. We used a recycler view to store the notes and display them on the main note page (screen) 
+To begin we integrated Firebase into our data handling to store our user entries. We used a recycler view to store the notes and display them on the main note page (screen) 
 and it allows for users to scroll and view all posted notes without fear of losing the content when it goes off the page!
 <br>
 <br>
@@ -45,20 +45,8 @@ Safeargs and View Groups were implemented to transfer data from MainActivity.kt 
 * [Add Note] -> [TITLE:Cities] [Typed: New York, Miami, Seattle, Chicago, Paris, Madrid] [SAVE]
 * [Add Note] -> [TITLE:Food] [Typed: Popcorn, Salad, Fruit, Vegtable, Pasta ] [SAVE]
 * [Cities]   -> [TITLE:Cities] [Typed: New York, Miami, Seattle ] [SAVE]
-* [Add Note] -> [TITLE:Test 2]  [Typed: u] [SAVE]
-  [Add Note] -> [TITLE:TEST 3]  [Typed: T] [SAVE]
-  [Add Note] -> [TITLE:TEST 4]  [Typed: T] [SAVE]
-  [Add Note] -> [TITLE:TEST 5]  [Typed: T] [SAVE]
 * [Add Note] -> [TITLE:Animals you see at the Zoo]  [Typed: Cat, Dog, Elepant, Snake, Zebra] [SAVE]
-* [Add Note] -> [TITLE:Hello] [Typed: Hello, Aloha, Hola, Bonjour, Ni Hao, Halo ] [SAVE] 
 * [Animals]  -> [TITLE:House Pet]  [Typed: Cat] [BACK]
-* [Cities] [BACK]
-* [House Pet] [Type: Cat] [BACK]
-* [Test 2] [X] [yes]
-* [TEST 3] [X] [yes]
-* [TEST 4] [X] [yes]
-* [TEST 5] [X] [yes]
-* [friends] [X] [no]
 
 <br>
 
