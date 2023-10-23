@@ -1,7 +1,7 @@
-# Project_6 The master branch contains our Project_6 submission
-<br>
-this is where we implemented an SQL database
+# Project 6 - Master Branch
 
-##Under the Project_7 branch is where you will find our project_7 
-<br>
-this is where we shifted to a Firebase approach
+The master branch contains our Project 6 submission, where we implemented an SQL database.
+
+## Project 7 - Project_7 Branch
+
+Under the Project_7 branch, you will find our Project 7 submission. In this project, we shifted to a Firebase approach.
