@@ -28,6 +28,7 @@ class SplashFragment : Fragment() {
         return view
     }
 
+    //Navigates based on whether the current user exists or not, delay is applied to allow everything to be inputted into firebase
     override fun onStart() {
         super.onStart()
         val currentUser = viewModel.getCurrentUser()

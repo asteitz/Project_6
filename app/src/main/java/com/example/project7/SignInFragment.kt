@@ -55,6 +55,7 @@ class SignInFragment : Fragment() {
             binding.passEt.setText(viewModel.user.password)
         }
 
+        //Adds new user to viewModel if a value was already present (someone logged in before)
         if (viewModel.user.email.isNotBlank() && viewModel.user.password.isNotBlank()) {
             binding.emailEt.setText(viewModel.user.email)
             binding.passEt.setText(viewModel.user.password)

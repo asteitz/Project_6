@@ -1,4 +1,5 @@
 package com.example.project7
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -23,7 +24,7 @@ class NotesViewModel : ViewModel() {
     private val _notes: MutableLiveData<MutableList<Note>> = MutableLiveData()
     val notes: LiveData<List<Note>>
         get() = _notes as LiveData<List<Note>>
-
+    //Below are variables we will attach observers
     private val _navigateToNote = MutableLiveData<String?>()
     val navigateTonote: LiveData<String?>
         get() = _navigateToNote
@@ -46,7 +47,7 @@ class NotesViewModel : ViewModel() {
 
     private lateinit var notesCollection: DatabaseReference
 
-
+    //Adds initial list of notes to db
     init {
         auth = Firebase.auth
         if (noteId.trim() == "") {
@@ -65,7 +66,6 @@ class NotesViewModel : ViewModel() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 var notesList: ArrayList<Note> = ArrayList()
                 for (noteSnapshot in dataSnapshot.children) {
-                    // TODO: handle the post
                     var note = noteSnapshot.getValue<Note>()
                     note?.noteId = noteSnapshot.key!!
                     notesList.add(note!!)
@@ -74,14 +74,13 @@ class NotesViewModel : ViewModel() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                // Getting Post failed, log a message
-                // ...
+                Log.d("Database issue", "Something horrible has happened :(")
             }
         })
 
     }
+    //Adds/updates notes
     fun updateNote() {
-        // add new note or update an existing one if it already exists
         if (noteId.trim() == "") {
             notesCollection.push().setValue(note.value)
         } else {
@@ -105,7 +104,7 @@ class NotesViewModel : ViewModel() {
         noteId = ""
         note.value = Note()
     }
-
+    //Navigation components
     fun onNoteNavigated() {
         _navigateToNote.value = null
     }
@@ -135,6 +134,7 @@ class NotesViewModel : ViewModel() {
         navigateToSignIn()
     }
 
+    //Signs user in with given name and password
     fun signIn() {
         if (user.email.isEmpty() || user.password.isEmpty()) {
             _errorHappened.value = "Email and password cannot be empty."
@@ -149,7 +149,7 @@ class NotesViewModel : ViewModel() {
             }
         }
     }
-
+    //Signs user up with given name and password
     fun signUp() {
         if (user.email.isEmpty() || user.password.isEmpty()) {
             _errorHappened.value = "Email and password cannot be empty."

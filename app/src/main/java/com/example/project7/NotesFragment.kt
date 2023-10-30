@@ -34,12 +34,13 @@ class NotesFragment : Fragment()   {
         val adapter = NoteItemAdapter(::noteClicked)
 
         binding.notesList.adapter = adapter
-
+        //Observes changes in notes and submits list via the adapter when updates are made
         viewModel.notes.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.submitList(it)
             }
         })
+        //Observers changes of navigateToNote and navigates when change occurs
         viewModel.navigateTonote.observe(viewLifecycleOwner, Observer { noteId ->
             noteId?.let {
                 val action = NotesFragmentDirections
@@ -48,7 +49,7 @@ class NotesFragment : Fragment()   {
                 viewModel.onNoteNavigated()
             }
         })
-
+        //Again observers changes and navigates
         viewModel.navigateToSignIn.observe(viewLifecycleOwner, Observer { navigate ->
             if(navigate) {
                 this.findNavController().navigate(R.id.action_notesFragment_to_signInFragment)
