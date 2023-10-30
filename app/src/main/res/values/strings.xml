@@ -13,4 +13,5 @@
     <string name="click_to_sign_in">Click to sign in</string>
     <string name="sign_out">Sign Out</string>
     <string name="notes">Notes</string>
+    <string name="not_registered_yet">Not Registered Yet?</string>
 </resources>
