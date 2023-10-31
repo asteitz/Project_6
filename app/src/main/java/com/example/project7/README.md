@@ -6,6 +6,8 @@
 In our efforts to complete Project 07 we implemented an interactive Ui (User Interface) that allows the user to add notes utilizing Firebase's Realtime Database.
 
 This app allows for a user to:
+- Log in to their account
+- Sign up if they are not in the system
 - Create a new note
 - Edit a previous Note
 - Delete an Existing Note
@@ -14,7 +16,11 @@ To begin we integrated Firebase into our data handling to store our user entries
 and it allows for users to scroll and view all posted notes without fear of losing the content when it goes off the page!
 <br>
 <br>
-To begin a user is prompted to "Add a Note" at the bottom  of the main screen where they are taken to the next fragment, prompting for a Note Title and Note Body.
+To begin a user is prompted to sign in to the notes app. If they do not have an account they can sign up if they have an account they will be brough back to their previous
+notes app with thier previously made notes.
+<br>
+<br>
+Once on the home page a user can click the upper band's add not button in order to "Add a Note" in the ribbon  of the main screen where they are taken to the next fragment, prompting for a Note Title and Note Body.
 After the user enters both they have the option to go "BACK" to the main page or "SAVE". If "SAVE" is pressed, then their note title and bosy are inserted into the database.
 If they select back, then their note is not saved and they will return back to the main page and will _not_ see their note present.
 <br>
