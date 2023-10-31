@@ -45,8 +45,10 @@ class EditNoteFragment : Fragment() {
             }
         })
         fun yesPressed(noteId : String) {
-            viewModel.deleteNote(noteId)
-            NavigateToNotesFragment(view, viewModel)
+            if (noteId != "") {
+                viewModel.deleteNote(noteId)
+                NavigateToNotesFragment(view, viewModel)
+            }
         }
         binding.Deletenote.setOnClickListener {
             ConfirmDeleteDialogFragment(noteId,::yesPressed).show(childFragmentManager,
