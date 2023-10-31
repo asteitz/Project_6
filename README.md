@@ -6,4 +6,4 @@ The master branch contains our Project 6 submission, where we implemented an SQL
 
 ## Project 7 - Project_7 Branch
 
-Under the Project_7 branch, you will find our Project 7 submission. In this project, we shifted to a Firebase approach. You can access the project's readme along with the Kotlin files [here](https://github.com/asteitz/Project_6/tree/project_7/app/src/main/java/com/example/project6#readme).
+Under the Project_7 branch, you will find our Project 7 submission. In this project, we shifted to a Firebase approach. You can access the project's readme along with the Kotlin files [here](https://github.com/asteitz/Project_6/blob/project_7/app/src/main/java/com/example/project7/README.md).
