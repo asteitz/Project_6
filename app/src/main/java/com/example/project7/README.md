@@ -39,29 +39,13 @@ Safeargs and View Groups were implemented to transfer data from MainActivity.kt 
 **Demonstrated**
 <br>
 **START**
-* [Add Note] -> [TITLE:Gettysburg address intro] [Typed: Four score and seven years ago our fathers brought forth on this continent a new nation, 
-conceived in liberty, and dedicated to the proposition that all men are created equal.
-“Now we are engaged in a great civil war, testing whether that nation, or any nation so 
-conceived and so dedicated, can long endure. We are met on a great battlefield of that war. 
-We have come to dedicate a portion of that field as a final resting place for those who here 
-gave their lives that that nation might live. It is altogether fitting and proper that we should do this.] [SAVE]
-    <br>
-* [Add Note] -> [TITLE:TWMYB - One Direction] [Typed:You're insecure, don't know what for
-  You're turning heads when you walk through the door
-  Don't need makeup to cover up
-  Being the way that you are is enough
-  Everyone else in the room can see it
-  Everyone else, but you, ooh
-  Baby, you light up my world like nobody else
-  The way that you flip your hair gets me overwhelmed
-  But when you smile at the ground, it ain't hard to tell
-  You don't know, oh-oh
-  You don't know you're beautiful] [BACK]
-* [Add Note] -> [TITLE:Cities I have visited] [Typed: I have been to New York, I have been to Miami, I have been to Seattle, 
-I have been to Chicago, I have been to Paris, I have been to Madrid] [SAVE]
-* [Add Note] -> [TITLE:Food] [Typed: Popcorn, Salad, Fruit, Vegtable, Pasta ] [SAVE]
-* [Add Note] -> [TITLE:Animals you see at the Zoo]  [Typed: When you go to the zoo there are plenty of animals to see! 
-When I go tis halloween I will see the linos, the elephants, the monkeys, the orangatans, the snakes, and so many more!!] [SAVE]
+* [Add Note] -> [TITLE:Gettysburg address intro] 
+[Typed: Four score and seven years ago our fathers brought forth on this continent a new nation] [SAVE]
+* [Add Note] -> [TITLE:TWMYB - One Direction] [Typed:You're insecure, don't know what for You're turning heads when you walk through the door] [BACK]
+* [Add Note] -> [TITLE:Cities I have visited] [Typed: I have been to New York, I have been to Seattle, I have been to Chicago, I have been to Paris, I have been to Madrid] [SAVE]
+* [Delete Note] -> [Clicked the second cities I have visitied] -> [Are you sure? Yes/No] -> [Yes] 
+* [Add Note] -> [TITLE:Animals you see at the Zoo]  [Typed: When i went to the zoo recently. When I I went I saw many animals. I saw lions, i saw elephants, i saw monkeys, i saw orangatans, i saw snakes, and so many more!] [SAVE]
+  ] [SAVE]
 
 <br>
 
@@ -75,7 +59,7 @@ Here's a walkthrough of a few translations:
 **there was a slight adjustment to the buttons size that was implemented after the video was created and the changes do not alter the performance of the app -> however this changes clossly
 reflects the UI requested in the PDF**
 <br>
-<img src='https://github.com/asteitz/Project_6/blob/master/app/src/main/java/com/example/project6/RecordingNotesApp.gif' title='Project6 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
+<img src='https://github.com/asteitz/Project_6/blob/master/app/src/main/java/com/example/project_7/RecordingNotesApp.gif' title='Project6 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
 
 GIF created with [CloudConvert](https://cloudconvert.com/).
 
