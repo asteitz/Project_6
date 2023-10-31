@@ -64,11 +64,12 @@ Here's a walkthrough of a few translations:
 **there was a slight adjustment to the buttons size that was implemented after the video was created and the changes do not alter the performance of the app -> however this changes clossly
 reflects the UI requested in the PDF**
 <br>
-<img src='https://github.com/asteitz/Project_6/blob/master/app/src/main/java/com/example/project_7/RecordingNotesApp.gif' title='Project6 Video Walkthrough' width='50%' height = '50%' alt='Video Walkthrough' />
+**the file was too large so I needed to upload it into google drive, it is here to be viewed.**
+
+[Recording in GIF of Walk Through](https://drive.google.com/drive/folders/1wdu8D1Y70XMGGYCYbNLjWmpL0lUME4LM)
 
 GIF created with [CloudConvert](https://cloudconvert.com/).
 
-## Notes
 UI Challenges:
 - Not much changed, but we built off our previous learnings from Project 6's challenges
 - Integrating a recycler View into the UI for the main notes page
